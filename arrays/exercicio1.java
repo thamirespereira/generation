@@ -1,5 +1,4 @@
 package arrays;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class exercicio1 {
@@ -17,7 +16,6 @@ public class exercicio1 {
             if (indice % 2 != 0) {
                     impar++;
                 }
-              
                 }
 
             for (int i : vetor) {
@@ -35,6 +33,8 @@ public class exercicio1 {
             System.out.println("Soma de todos os elementos do vetor: " + soma);
         
             System.out.println("Média de todos os elementos do vetor: " + (soma/10));
+
+            leia.close();
         }
         
         
