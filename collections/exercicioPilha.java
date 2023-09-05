@@ -44,8 +44,9 @@ public class exercicioPilha {
                 stack.clear();
             break;
             default:
+                System.out.println("Número inválido");
                 break;
         }
-    
+    ler.close();
 }
     }

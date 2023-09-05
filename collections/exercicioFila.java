@@ -15,7 +15,7 @@ Caso a fila esteja vazia, o programa deverá informar que a fila está vazia ao 
 public class exercicioFila {
     public static void main(String[] args) {
         
-        int opcao = 0;
+        String opcao;
         String cliente;
         Scanner ler = new Scanner(System.in);
 
@@ -26,33 +26,34 @@ public class exercicioFila {
                 "3: Chamar (retirar) uma pessoa da fila \r\n" + //
                 "0: O programa deve ser finalizado. ");
         System.out.println("Digite uma opção: ");
-        opcao = ler.nextInt();
+        opcao = ler.nextLine();
 
-        while(opcao > 0 || opcao < 3){
-            if(opcao == 1){
-                System.out.println("Digite o seu nome: ");
+        switch (opcao) {
+            case "1":
+                System.out.println("Digite um nome: ");
                 cliente = ler.nextLine();
                 filaClientes.add(cliente);
-            }
-            if(opcao == 2){
+                break;
+            
+            case "2":
                 System.out.println(filaClientes);
-            }
-            if (opcao == 3){
+                break;
+            case "3":
                 if(!filaClientes.isEmpty()){
                     filaClientes.poll();
                     System.out.println("Chamou um cliente.\n");
                     System.out.println(filaClientes);
                 }
-                
-            }
-            if (opcao == 0){
+                break;
+        
+            case "0":
                 filaClientes.clear();
-            } else{
-                System.out.println("Deseja continuar?");
-            }
-            
-                
-            }
+            break;
+            default:
+                System.out.println("Número inválido");
+                break;
 
         }
+        ler.close();
     }
+}
