@@ -23,8 +23,12 @@ public static void main(String[] args) {
 		impar++;
 	}
 	}
+
+	
 	System.out.println("Total numeros pares: " + par);
 	System.out.println("Total numeros impares: " + impar);
+
+	ler.close();
 }
 }
 	

@@ -16,6 +16,7 @@ public static void main(String[] args) {
 		soma = soma + num;
 	}while(num != 0);
 	
+	ler.close();
 	System.out.println("A soma dos números positivos é:" + soma);
 }
 }
