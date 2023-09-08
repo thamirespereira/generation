@@ -10,7 +10,7 @@ public class exercicio1 {
         int impar =0;
         Scanner leia = new Scanner(System.in);
 
-        for(int indice = 0; indice < 10; indice++){
+        for(int indice = 0; indice < 9; indice++){
             System.out.println("Digite um número:");
             vetor[indice] = leia.nextInt();
             if (indice % 2 != 0) {

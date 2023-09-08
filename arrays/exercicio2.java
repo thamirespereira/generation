@@ -14,10 +14,6 @@ public class exercicio2 {
             if (vetor[i] == numero) {
                 System.out.println("A posição do número digitado é: " + i);
             }
-                else{
-                    System.out.println("Número não encontrado");
-                }
-        
         }
         leia.close();
     }
