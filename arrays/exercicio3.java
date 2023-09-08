@@ -1,7 +1,7 @@
 package arrays;
 import java.util.Scanner;
 
-public class exercicio3 {
+public class Exercicio3 {
     public static void main(String[] args) {
         
         int matriz [][] = new int [3][3];

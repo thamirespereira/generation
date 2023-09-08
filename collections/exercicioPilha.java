@@ -10,7 +10,7 @@ Caso a pilha esteja vazia e o atendente tente retirar um livro da pilha, ele dev
 import java.util.Scanner;
 import java.util.Stack;
 
-public class exercicioPilha {
+public class ExercicioPilha {
     public static void main(String[] args) {
         
         String livro;

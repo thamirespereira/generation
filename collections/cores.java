@@ -9,7 +9,7 @@ Mostre na tela todas as cores que foram adicionadas.
 Mostre na tela todas as cores que foram adicionadas ordenadas em ordem crescente.
  */
 
-public class cores {
+public class Cores {
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);

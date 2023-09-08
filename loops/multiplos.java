@@ -6,7 +6,7 @@ segundo número. Caso contrário, deve ser exibida uma mensagem na tela informan
 programa. 
 Dentro do intervalo informado, mostre na tela todes os números que são múltiplos de 3 e 5. */
 
-public class multiplos {
+public class Multiplos {
     public static void main(String[] args) {
         
         Scanner ler = new Scanner(System.in);

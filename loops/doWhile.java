@@ -4,7 +4,7 @@ import java.util.Scanner;
 /*Escreva um algoritmo em Java, que leia números inteiros via teclado, até que o 
  zero seja digitado. Ao final, mostre na tela a soma de todos os números digitados, 
  que sejam positivos.*/
-public class doWhile {
+public class DoWhile {
 public static void main(String[] args) {
 	int num, soma=0;
 	

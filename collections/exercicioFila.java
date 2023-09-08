@@ -12,7 +12,7 @@ chegada dos Clientes de um Banco. O programa deverá ter um Menu que aceitará a
 0: O programa deve ser finalizado. 
 Caso a fila esteja vazia, o programa deverá informar que a fila está vazia ao tentar retirar (chamar) um cliente da fila..
  */
-public class exercicioFila {
+public class ExercicioFila {
     public static void main(String[] args) {
         
         String opcao;

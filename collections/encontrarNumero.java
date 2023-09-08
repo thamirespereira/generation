@@ -9,7 +9,7 @@ inicializada com 10 valores inteiros. O programa deverá solicitar ao usuário, 
 Caso o número não seja encontrado, ele deverá exibir na tela a mensagem: O número NN não foi encontrado!
  */
 
-public class encontrarNumero {
+public class EncontrarNumero {
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);

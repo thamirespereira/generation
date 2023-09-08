@@ -9,7 +9,7 @@ O programa deverá solicitar ao usuário, que ele digite via teclado 10 valores 
 adicione-os individualmente na Collection Set. Em seguida, faça o que se pede:
 Mostre na tela todos os elementos da Collection Set, utilizando a Classe Iterator. */
 
-public class numeros {
+public class Numeros {
     public static void main(String[] args) {
         
         Scanner leia = new Scanner(System.in);
