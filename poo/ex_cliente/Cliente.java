@@ -1,17 +1,18 @@
-package poo;
+package poo.ex_cliente;
 
 public class Cliente {
 
     public static void main(String[] args) {
     }
 
-    private int idade;
+    
     private String nome;
+    private int idade;
     private String genero;
     private String cidade;
     private float totalCompras;
 
-    public Cliente(int idade, String nome, String genero, String cidade, float totalCompras) {
+    public Cliente(String nome, int idade, String genero, String cidade, float totalCompras) {
         this.idade = idade;
         this.nome = nome;
         this.genero = genero;
@@ -21,10 +22,10 @@ public class Cliente {
     
     public void Visualizar(){
         System.out.println("Nome: " + this.nome);
-        System.out.println("\n Idade: " + this.idade);
-        System.out.println("\n Gênero: " + this.genero);
-        System.out.println("\n Cidade: " + this.cidade);
-        System.out.println("\n Valor total das compras: " + this.totalCompras);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("Gênero: " + this.genero);
+        System.out.println("Cidade: " + this.cidade);
+        System.out.println("Valor total das compras: " + this.totalCompras);
     }
     
     public int getIdade() {

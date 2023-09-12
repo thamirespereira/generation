@@ -1,4 +1,4 @@
-package poo;
+package poo.ex_farmacia;
 
 public class Farmacia {
     public static void main(String[] args) {
