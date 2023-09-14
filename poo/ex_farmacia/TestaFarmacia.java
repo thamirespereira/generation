@@ -1,8 +1,11 @@
 package poo.ex_farmacia;
 
+import java.util.InputMismatchException;
+
 public class TestaFarmacia {
     public static void main(String[] args) {
-        
+
+        try {
         Remedio remedio1 = new Remedio("Bromoprida", 23.00f, "12 meses", "Genérico", 4345, true);
         Remedio remedio2 = new Remedio("Dipirona", 5.00f, "12 meses", "Analgésico", 3244, false);
 
@@ -21,5 +24,12 @@ public class TestaFarmacia {
         produto1.Visualizar();
         System.out.println("-----------------");
         produto2.Visualizar();
+
+        } catch (InputMismatchException e) {
+            System.err.println("Excecao: " + e);
+            System.out.println("Digite um dado válido");
+        }
+        
+        
     }
 }

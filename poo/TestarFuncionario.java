@@ -1,8 +1,10 @@
 package poo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TestarFuncionario {
+ 
     public static void main(String[] args) {
         
         Funcionario funcionario1 = new Funcionario(null, null, null, 0, 0);
@@ -10,7 +12,8 @@ public class TestarFuncionario {
 		Funcionario funcionario2 = new Funcionario(null, null, null, 0, 0);
 	
 		Scanner ler = new Scanner(System.in);
-	
+
+		try {
 		//funcionario 1
 		System.out.println("Nome: ");
 		funcionario1.setNome(ler.nextLine());
@@ -48,6 +51,16 @@ public class TestarFuncionario {
 		System.out.println("-----------------------------------");
 		funcionario2.Visualizar();
 		
+		} catch (InputMismatchException e) {
+			System.err.println("\nExcecao: " + e);
+			ler.nextLine();
+			System.out.println("\nDigite um dado válido!");
+		}
+	
+		
+		
 		ler.close();
     }
 }
+
+
