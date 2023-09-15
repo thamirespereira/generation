@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class TestaCurso {
@@ -11,6 +12,9 @@ public class TestaCurso {
         Curso curso1 = new Curso(null, null, null, null, 0);
         Curso curso2 = new Curso(null, null, null, null, 0);
 
+        Optional <Curso> checaNulo = Optional.ofNullable(curso1);
+        Optional <Curso> checaNulo2 = Optional.ofNullable(curso2);
+        
         try {
         
         //curso 1
@@ -49,6 +53,21 @@ public class TestaCurso {
         System.out.println("-----------------");
         curso2.Visualizar();
 
+        if(checaNulo.isPresent()){
+			System.out.println("Dado válido.");
+			
+		}else{
+			System.out.println("\nDado nulo. Entre com um dado válido.");
+			System.out.println(curso1);
+		}
+
+        if(checaNulo2.isPresent()){
+			System.out.println("Dado válido.");
+			
+		}else{
+			System.out.println("\nDado nulo. Entre com um dado válido.");
+			System.out.println(checaNulo2);
+		}
         
         } catch (InputMismatchException e) {
             System.err.println("Excecao: " + e);
@@ -57,4 +76,7 @@ public class TestaCurso {
         }
         ler.close();
     }
-}
+
+    
+    }
+
