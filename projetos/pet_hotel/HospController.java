@@ -27,8 +27,7 @@ public class HospController implements HospRepository{
     }
 
     @Override
-    public void buscar() {
-        int numero = 0;
+    public void buscar(int numero) {
         var hospede = buscarNaCollection(numero);
 
         if(hospede != null)
@@ -43,7 +42,7 @@ public class HospController implements HospRepository{
     }
 
     public int gerarNumero(){
-        return numero ++;
+        return ++ numero;
     }
     
     public Hospedagem buscarNaCollection(int numero){

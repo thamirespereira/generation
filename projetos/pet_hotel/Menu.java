@@ -14,7 +14,6 @@ public class Menu {
         Scanner ler = new Scanner(System.in);
 
         HospController h = new HospController();
-        //Hospedagem hospede = new Hospedagem(null, 0, null, null, null, false, false, null, 0){};
      
         int opcao, idade, numero;
         String nome, especie, raca, tutor;
@@ -96,7 +95,7 @@ public class Menu {
                      System.out.println("Digite o número desejado: ");
                      numero = ler.nextInt();
 
-                    h.buscar();
+                    h.buscar(numero);
                     keyPress();
                     break;
                 case 4:
