@@ -14,15 +14,16 @@ public class Menu {
         Scanner ler = new Scanner(System.in);
 
         HospController h = new HospController();
-        Hospedagem hospede = new Hospedagem(null, 0, null, null, null, false, false, null, 0) {
-        };
-
-        int opcao, numero;
-        //int numero;
+        //Hospedagem hospede = new Hospedagem(null, 0, null, null, null, false, false, null, 0){};
+     
+        int opcao, idade, numero;
+        String nome, especie, raca, tutor;
+        Boolean vacina, castracao;
+        Float peso;
 
         while (true) {
             System.out.println("--------------------------------");
-            System.out.println("\nPet Hotel");
+            System.out.println("\n         Pet Hotel");
             System.out.println("\n--------------------------------");
             System.out.println("\nOpção 1: Fazer check-in. ");
             System.out.println("Opção 2: Listar todos os hospedes.");
@@ -53,48 +54,46 @@ public class Menu {
                     System.out.println("Fazer check-in: ");
                     
                     System.out.println("\nDigite o nome do pet: ");
-                    hospede.setNome(ler.nextLine());
+                    nome = ler.nextLine();
 
                     System.out.println("Digite a idade do pet:");
-                    hospede.setIdade(ler.nextInt());
+                    idade = ler.nextInt();
                     ler.skip("\\R");
 
                     System.out.println("Digite a espécie: ");
-                    hospede.setEspecie(ler.nextLine());
+                    especie = ler.nextLine();
 
                     System.out.println("Digite a raça: ");
-                    hospede.setRaca(ler.nextLine());
+                    raca = ler.nextLine();
 
                     System.out.println("Digite o peso do animal: ");
-                    hospede.setPeso(ler.nextFloat());
+                    peso = ler.nextFloat();
                     ler.skip("\\R");
 
                     System.out.println("Seu pet é vacinado? (true/false)");
-                    hospede.setVacina(ler.nextBoolean());
+                    vacina = ler.nextBoolean();
                     ler.skip("\\R");
 
                     System.out.println("Seu pet é castrado? (true/false)");
-                    hospede.setCastracao(ler.nextBoolean());
+                    castracao = ler.nextBoolean();
                     ler.skip("\\R");
 
                     System.out.println("Digite o seu nome: ");
-                    hospede.setTutor(ler.nextLine());
+                    tutor = ler.nextLine();
 
-                    System.out.println("\nVerifique os dados inseridos:");
-                    hospede.visualizar();
-                    //h.cadastrar(hospede);
-                    h.cadastrar(new CheckIn(null,h.gerarNumero(),  null, null, null, false, false, null, null));
+                    h.cadastrar(new CheckIn(nome, idade, especie, raca, peso, vacina, castracao, tutor, h.gerarNumero()));
                     
                     keyPress();
                     break;
                 case 2:
                     System.out.println("Listar todos os hospedes.");
                     h.listar();
+        
                     keyPress();
                     break;
                 case 3:
                      System.out.println("Buscar hospede por número do quarto.");
-                     System.out.println("Digite o número: ");
+                     System.out.println("Digite o número desejado: ");
                      numero = ler.nextInt();
 
                     h.buscar();
@@ -104,7 +103,8 @@ public class Menu {
                     System.out.println("Fazer check-out.");
                     CheckOut pag = new CheckOut(null, opcao, null, null, null, false, false, null, null);
                     System.out.println("Valor da hospedagem: R$100,00");
-                    System.out.println("Digite o valor que deseja pagar: ");
+                    System.out.println("Digite o valor: ");
+                    
                     pag.setPagamento(ler.nextFloat());
 
                     h.pagar();

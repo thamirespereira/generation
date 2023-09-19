@@ -10,14 +10,7 @@ public class HospController implements HospRepository{
     private ArrayList <Hospedagem> listaHospedes = new ArrayList <Hospedagem>();
     int numero = 0;
 
-    public Hospedagem buscarNaCollection(int numero){
-        for (var hospede : listaHospedes){
-            if (hospede.getNumero() == numero){
-                return hospede;
-            }
-        }
-        return null;
-    }
+    
     @Override
     public void cadastrar(Hospedagem hospede) {
         listaHospedes.add(hospede);
@@ -52,5 +45,13 @@ public class HospController implements HospRepository{
     public int gerarNumero(){
         return numero ++;
     }
-
+    
+    public Hospedagem buscarNaCollection(int numero){
+        for (var hospede : listaHospedes){
+            if (hospede.getNumero() == numero){
+                return hospede;
+            }
+        }
+        return null;
+    }
 }
